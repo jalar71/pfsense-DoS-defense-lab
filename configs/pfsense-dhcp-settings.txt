@@ -1,0 +1,12 @@
+# DHCP Server Settings (pfSense WebGUI > Services > DHCP Server > LAN)
+Enabled: Yes
+Interface: LAN (10.109.25.1/24)
+
+Range:
+Start:10.109.25.11
+End:10.109.25.15
+
+DNS Servers: 192.168.1.1
+
+Lease Time: Default
+Gateway 10.109.25.1

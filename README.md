@@ -14,7 +14,10 @@ This project simulates a Denial-of-Service (DoS) attack in a controlled home lab
 - Block the attack via pfSense firewall rules
 
 ---
+## 🖥️ Lab Topology
 
+![Network Topology](topology/vm-network-diagram.png)
+---
 ## 📡 Networking Overview
 
 ### 🔧 pfSense Firewall

@@ -32,6 +32,7 @@ This project simulates a Denial-of-Service (DoS) attack in a controlled home lab
 - **Adapter Type**: Bridged
 - **Role**: External attacker
 - **Routing**: Static route to reach 10.109.25.0/24 via pfSense WAN
+![kali](screenshots/route-add-kali.png)
 
 ```bash
 sudo ip route add 10.109.25.0/24 via 192.168.1.193

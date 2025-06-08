@@ -42,17 +42,20 @@ sudo ip route add 10.109.25.0/24 via 192.168.1.193
 - **Adapter Type**: Host-Only
 - **DHCP**: IP and gateway assigned by pfSense
 - **Role**: Internal system under attack
+![Ubuntu Under Attack](screenshots/ubuntu-wireshark-flood.png)
 
 ## 🔐Firewall Rules
 ### ✔️Allow Initial Access (for DoS simulation)
 - **Interface**: WAN
 - **Source**: Kali IP (`192.168.1.56`)
 - **Destination**: Ubuntu IP (`10.109.25.11`)
+![Pfsense Rules](screenshots/pfsense-webgui-rules.png)
 ### ❌Block DoS Traffic
 - **Interface**: WAN
 - **Source**: Kali IP
 - **Destination**: Ubuntu IP
 - **Action**: Block & Log
+![Blocked Logs](screenshots/blocked-logs-pfsense.png)
 ### 🚀Attack & Defense Workflow
 1. Kali sends a flood using:
    ```bash
@@ -62,4 +65,4 @@ sudo ip route add 10.109.25.0/24 via 192.168.1.193
 3. A pfSense rule is applied to block further incoming traffic from Kali.
 4. Wireshark confirms the flood has stopped
 5. pfSense logs show blocked traffic entries for Kali's IP.
-  
+ ![Kali Attack](screenshots/kali-icmp-flood-command.png)
